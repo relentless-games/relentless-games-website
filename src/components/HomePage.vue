@@ -1,21 +1,21 @@
 <template>
     <div class="wrapper">
       <div class="container">
-        <div class="top-left drop-shadow">
-          <video autoplay loop muted>
-            <source src="videos/TestVideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
         <div class="top-right drop-shadow">
           <video autoplay loop muted>
             <source src="videos/TestVideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
+        <div class="top-left drop-shadow">
+          <video autoplay loop muted>
+            <source src="videos/Slydle.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <div class="bottom-left drop-shadow">
           <video autoplay loop muted>
-            <source src="videos/TestVideo.mp4" type="video/mp4" />
+            <source src="videos/Mapping.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
