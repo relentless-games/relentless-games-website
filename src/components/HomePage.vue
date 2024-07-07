@@ -1,25 +1,25 @@
 <template>
     <div class="wrapper">
       <div class="container">
-            <div class="top-left">
+            <div class="top-left drop-shadow">
                 <video autoplay loop muted>
                 <source src="videos/TestVideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="top-right">
+            <div class="top-right drop-shadow">
                 <video autoplay loop muted>
                 <source src="videos/TestVideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="bottom-left">
+            <div class="bottom-left drop-shadow">
                 <video autoplay loop muted>
                 <source src="videos/TestVideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="bottom-right">
+            <div class="bottom-right drop-shadow">
                 <img src="images/Relentless_Games_Logo.png" alt="Relentless Games logo of a gorilla wearing a VR headset" class="logo" />
                 <div class="contact-info">
                 <div class="contact-item">
@@ -137,13 +137,17 @@ a {
   color: #d10065 !important; 
 }
 
+.drop-shadow {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 8px; /* Optional: adds rounded corners */
+  overflow: hidden; /* Ensures the video doesn't overflow the rounded corners */
+}
+
 video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block; /* Removes any extra space below the video */
 }
 
 @media (max-width: 768px) {
