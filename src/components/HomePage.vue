@@ -20,18 +20,17 @@
                 </video>
             </div>
             <div class="bottom-right">
-                <img src="images/Relentless_Games_Logo_1024.png" alt="Relentless Games logo of a gorilla wearing a VR headset" class="logo" />
+                <img src="images/Relentless_Games_Logo.png" alt="Relentless Games logo of a gorilla wearing a VR headset" class="logo" />
                 <div class="contact-info">
-                <h2>Relentless Games</h2>
                 <div class="contact-item">
                     <h3>Gareth Griffiths</h3>
                     <a href="mailto:g@relentless.games">g@relentless.games</a><br />
-                    <a href="https://www.linkedin.com/in/gngriffiths/" target="_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/gngriffiths/" target="_blank">LinkedIn/Gareth</a>
                 </div>
                 <div class="contact-item">
                     <h3>Michael Gallegos</h3>
                     <a href="mailto:m@relentless.games">m@relentless.games</a><br />
-                    <a href="https://www.linkedin.com/in/mgallegos91/" target="_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/mgallegos91/" target="_blank">LinkedIn/Michael</a>
                 </div>
                 </div>
             </div>
@@ -46,7 +45,7 @@
   </script>
   
   <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .wrapper {
   position: fixed;
@@ -59,6 +58,7 @@
   align-items: center;
   padding: 5vw;
   box-sizing: border-box;
+  background-color: #9feffb;
 }
 
 .container {
@@ -111,15 +111,10 @@
   width: 100%;
 }
 
-.contact-info h2 {
-  font-family: 'Anton', sans-serif;
-  margin: 2% 0;
-  font-size: clamp(16px, 3vw, 24px);
-  text-transform: uppercase; /* Optional: if you want all caps */
-}
-
 body, .contact-item h3, .contact-item a {
   font-family: 'Roboto', sans-serif;
+  color: #250057;
+  
 }
 
 .contact-item {
@@ -136,6 +131,10 @@ body, .contact-item h3, .contact-item a {
   color: #42b983;
   text-decoration: none;
   font-size: clamp(12px, 2vw, 16px);
+}
+
+a {
+  color: #d10065 !important; 
 }
 
 video {
