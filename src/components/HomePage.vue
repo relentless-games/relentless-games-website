@@ -213,6 +213,10 @@
   object-fit: contain;
 }
 
+/* All fonts */
+* {
+  font-family: 'Roboto', sans-serif;
+}
 
 body, .contact-item h3, .contact-item a {
   font-family: 'Roboto', sans-serif;
