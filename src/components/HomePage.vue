@@ -20,10 +20,12 @@
         <div class="bottom-left drop-shadow background-image-container">
           <div class="profile-container">
             <h2>Mike</h2>
+            <h4>He/Him</h4>
             <p>Mike has over five years of marketing and design experience in agencies and gaming startups. He designs, markets, and does business development. He's probably busy networking right now!</p>
           </div>
           <div class="profile-container">
             <h2>Gareth</h2>
+            <h4>He/They</h4>
             <p>Gareth has over 15 years of experience in full stack development for games and web applications. They code and manage projects. They're probably busy typing right now!</p>
           </div>
       </div>
@@ -88,19 +90,23 @@
   flex-direction: column;
   justify-content: center;
   text-align: left;
-
   width: 25%; /* Adjust width to be more readable */
   margin: 10px 0 0;
   font-size: 1em; /* Increase text size */
 }
 
-.profile-container h2 {
-  font-size: 1.5em; /* Larger header for better readability */
+.profile-container h4 {
+  margin: 0;
+  padding-top: 5px; /* Add space above the pronouns */
+  padding-bottom: 10px; /* Add space below the pronouns */
 }
 
 .profile-container p {
-  font-size: 1em; /* Standardize paragraph size */
+  margin: 0;
+  padding-top: 10px; /* Add space above the paragraph */
+  padding-bottom: 10px; /* Add space below the paragraph */
 }
+
 
   .video-container {
   position: relative;
