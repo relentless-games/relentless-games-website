@@ -1,12 +1,16 @@
 <template>
     <div class="wrapper">
       <div class="container">
-        <div class="top-right drop-shadow">
-          <video autoplay loop muted>
-            <source src="videos/TestVideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        <div class="top-right drop-shadow video-container">
+        <iframe
+          src="https://www.youtube.com/embed/y_CSRU-1_HY?autoplay=1&mute=1&loop=1&playlist=y_CSRU-1_HY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
         <div class="top-left drop-shadow">
           <video autoplay loop muted>
             <source src="videos/Slydle.mp4" type="video/mp4" />
@@ -20,21 +24,25 @@
           </video>
         </div>
         <div class="bottom-right drop-shadow">
-    <div class="content-wrapper">
-        <div class="qr-code-container">
-        <img src="images/link-tree-qr.png" alt="QR code" class="qr-code" />
-        <a href="https://linktr.ee/relentlessgames" target="_blank" class="linktree-link">LinkTree</a>
-      </div>
+          <div class="content-wrapper">
+            <div class="qr-code-container">
+              <a href="https://sprouter.app/relentlessgames" target="_blank" class="links">
+                <img src="images/link-tree-qr.png" alt="QR code" class="qr-code" />
+              </a>
+              <a href="https://sprouter.app/relentlessgames" target="_blank" class="links">Links</a>
+          </div>          
       <div class="contact-info">
         <div class="contact-item">
-          <h3>Gareth Griffiths</h3>
-          <a href="mailto:g@relentless.games">g@relentless.games</a><br />
-          <a href="https://www.linkedin.com/in/gngriffiths/" target="_blank">LinkedIn/Gareth</a>
-        </div>
-        <div class="contact-item">
           <h3>Michael Gallegos</h3>
+          <i>Business</i><br /><br />
           <a href="mailto:m@relentless.games">m@relentless.games</a><br />
           <a href="https://www.linkedin.com/in/mgallegos91/" target="_blank">LinkedIn/Michael</a>
+        </div>
+        <div class="contact-item">
+          <h3>Gareth Griffiths</h3>
+          <i>Software</i><br /><br />
+          <a href="mailto:g@relentless.games">g@relentless.games</a><br />
+          <a href="https://www.linkedin.com/in/gngriffiths/" target="_blank">LinkedIn/Gareth</a>
         </div>
       </div>
       <div class="logo-container">
@@ -55,6 +63,22 @@
   <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
   
+  .video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
   .wrapper {
     position: fixed;
     top: 0;
@@ -100,7 +124,7 @@
   display: flex;
   width: 100%;
   height: 100%;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
 }
 
@@ -111,17 +135,28 @@
 
 .drop-shadow {
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  border-radius: 8px; /* Optional: adds rounded corners */
-  overflow: hidden; /* Ensures the video doesn't overflow the rounded corners */
+  border-radius: 8px; 
+  overflow: hidden; 
 }
-
 
 .qr-code-container {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
+}
+
+.qr-code {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 10px; 
+}
+
+.links {
+  text-align: center;
+  font-size: 16px; 
+  margin-top: 10px; 
 }
 
 .logo-container {
@@ -130,13 +165,6 @@
   justify-content: flex-end;
   align-items: center;
 }
-
-.qr-code {
-  max-width: 80%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
 
 .logo {
   max-width: 100%;
