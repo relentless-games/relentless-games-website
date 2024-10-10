@@ -17,12 +17,16 @@
             Your browser does not support the video tag.
           </video>
         </div>
-        <div class="bottom-left drop-shadow">
-          <video autoplay loop muted>
-            <source src="videos/Mapping.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        <div class="bottom-left drop-shadow background-image-container">
+          <div class="profile-container">
+            <h2>Mike</h2>
+            <p>Mike has over five years of marketing and design experience in agencies and gaming startups. He designs, markets, and does business development. He's probably busy networking right now!</p>
+          </div>
+          <div class="profile-container">
+            <h2>Gareth</h2>
+            <p>Gareth has over 15 years of experience in full stack development for games and web applications. They code and manage projects. They're probably busy typing right now!</p>
+          </div>
+      </div>
         <div class="bottom-right drop-shadow">
           <div class="content-wrapper">
             <div class="qr-code-container">
@@ -62,7 +66,42 @@
   
   <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-  
+
+  .background-image-container {
+  background-image:url("~@/assets/images/Relentless_Games_Team.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Ensures the containers are positioned left and right */
+  align-items: center;
+  padding: 5%;
+  overflow: hidden;
+}
+
+.profile-container {
+  height: 90%;
+  background-color: rgba(159, 239, 251, 0.7);
+  padding: 2%; /* Reduce padding to avoid too much space on the sides */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+
+  width: 25%; /* Adjust width to be more readable */
+  margin: 10px 0 0;
+  font-size: 1em; /* Increase text size */
+}
+
+.profile-container h2 {
+  font-size: 1.5em; /* Larger header for better readability */
+}
+
+.profile-container p {
+  font-size: 1em; /* Standardize paragraph size */
+}
+
   .video-container {
   position: relative;
   width: 100%;
@@ -202,10 +241,19 @@ a {
 
 
 @media (max-width: 768px) {
+  
+  .top-left, .bottom-left {
+    display: none;
+  }
   .wrapper {
     position: static;
     min-height: 100vh;
     padding: 5vw;
+  }
+
+  .background-image-container {
+    flex-direction: column;
+    justify-content: center;
   }
 
   .container {
