@@ -59,7 +59,7 @@ export default function Hero() {
 
         <div ref={videoRef} className="hero__video-wrapper">
           <iframe
-            src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&playsinline=1&rel=0&modestbranding=1`}
+            src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&playsinline=1&rel=0&modestbranding=1&enablejsapi=1`}
             title="Sprinkles — Game Trailer"
             width="100%"
             height="100%"
