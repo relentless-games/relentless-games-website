@@ -45,7 +45,17 @@ export default function Hero() {
         </div>
         <p ref={subtitleRef} className="hero__subtitle">
           Coming soon to Meta Quest
+          <br />
+          <a
+          href="https://sidequestvr.com/app/54836/sprinkles-the-hors-doeuvre"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hero__demo-link"
+        >
+          Try the demo on SideQuest
+        </a>
         </p>
+
 
         <div ref={videoRef} className="hero__video-wrapper">
           <iframe

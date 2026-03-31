@@ -6,12 +6,12 @@ import './Links.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const socials = [
-  { name: 'Twitter / X', url: '#', icon: '𝕏' },
-  { name: 'Instagram', url: '#', icon: '📸' },
-  { name: 'TikTok', url: '#', icon: '🎵' },
-  { name: 'YouTube', url: '#', icon: '▶' },
-  { name: 'Discord', url: '#', icon: '💬' },
-  { name: 'Linktree', url: '#', icon: '🌳' },
+  { name: 'TikTok', url: 'https://www.tiktok.com/@relentlessgames', icon: '🎵' },
+  { name: 'YouTube', url: 'https://www.youtube.com/@RelentlessScot', icon: '▶' },
+  { name: 'Bluesky', url: 'https://bsky.app/profile/relentless.games', icon: '🦋' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/company/relentless-games-sco/', icon: '💼' },
+  { name: 'Instagram', url: 'https://www.instagram.com/RelentlessScot', icon: '📸' },
+  { name: 'Sprouter', url: 'https://sprouter.app/relentlessgames', icon: '🌱' },
 ];
 
 export default function Links() {

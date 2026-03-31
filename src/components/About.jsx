@@ -33,20 +33,18 @@ export default function About() {
         <h2 className="about__heading">Who We Are</h2>
         <p className="about__intro">
           Relentless Games is a small, scrappy studio driven by a love for playful, 
-          immersive experiences. We're building <strong>Sprinkles</strong> — a vibrant, 
-          colorful game for <strong>Meta Quest</strong> that turns VR into a playground 
-          of pure joy.
+          immersive experiences. We're building <strong>Sprinkles</strong> a puzzle game for <strong>Meta Quest</strong>. It's a Mixed Reality experience with exploding cupcakes.
         </p>
 
         <div className="about__grid">
           <div className="about__card">
             <div className="about__icon">🎮</div>
-            <h3>VR-First</h3>
+            <h3>MR-First</h3>
             <p>Built from the ground up for Meta Quest, designed to make you smile.</p>
           </div>
           <div className="about__card">
             <div className="about__icon">🎨</div>
-            <h3>Bold & Colorful</h3>
+            <h3>Bold & Colourful</h3>
             <p>Eye-popping visuals and a vibrant art style that pops in every direction.</p>
           </div>
           <div className="about__card">
