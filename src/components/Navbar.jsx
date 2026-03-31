@@ -31,7 +31,7 @@ export default function Navbar() {
     <nav ref={navRef} className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
         <a href="#hero" className="navbar__logo" onClick={(e) => handleNavClick(e, 'hero')}>
-          <img src="/images/Relentless_Games_Logo.png" alt="Relentless Games" />
+          <img src="/images/relentless-games-logo.png" alt="Relentless Games" />
         </a>
 
         <button
