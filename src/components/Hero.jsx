@@ -1,15 +1,20 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import './Hero.css';
 
 const YOUTUBE_VIDEO_ID = '1_ImOyM18AA';
 
 export default function Hero() {
+  const [isPlayerLoaded, setIsPlayerLoaded] = useState(false);
   const heroRef = useRef(null);
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
   const videoRef = useRef(null);
   const ctaRef = useRef(null);
+  const youtubeWatchUrl = `https://www.youtube.com/watch?v=${YOUTUBE_VIDEO_ID}`;
+  const embedOrigin = encodeURIComponent(window.location.origin);
+  const embedUrl = `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&playsinline=1&rel=0&modestbranding=1&origin=${embedOrigin}`;
+  const thumbnailUrl = `https://i.ytimg.com/vi/${YOUTUBE_VIDEO_ID}/hqdefault.jpg`;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -58,16 +63,48 @@ export default function Hero() {
 
 
         <div ref={videoRef} className="hero__video-wrapper">
-          <iframe
-            src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&playsinline=1&rel=0&modestbranding=1&enablejsapi=1`}
-            title="Sprinkles — Game Trailer"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          {!isPlayerLoaded ? (
+            <button
+              type="button"
+              className="hero__video-poster"
+              onClick={() => setIsPlayerLoaded(true)}
+              aria-label="Play Sprinkles trailer"
+            >
+              <img
+                src={thumbnailUrl}
+                alt="Sprinkles trailer preview"
+                className="hero__video-thumbnail"
+                loading="lazy"
+              />
+              <span className="hero__video-play" aria-hidden="true">▶</span>
+              <span className="hero__video-caption">Play trailer</span>
+            </button>
+          ) : (
+            <iframe
+              src={embedUrl}
+              title="Sprinkles — Game Trailer"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+            />
+          )}
         </div>
+        <p className="hero__video-fallback">
+          If playback fails in your browser,
+          {' '}
+          <a
+            href={youtubeWatchUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero__video-fallback-link"
+          >
+            watch on YouTube
+          </a>
+          .
+        </p>
 
         <div ref={ctaRef} className="hero__cta">
           <a href="#about" className="btn btn-secondary">
