@@ -3,6 +3,6 @@
     "rewrite": "/index.html"
   },
   "globalHeaders": {
-    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.ytimg.com https://*.youtube.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://*.youtube.com https://*.google.com https://*.googlevideo.com; media-src 'self' https://*.youtube.com https://*.googlevideo.com"
+    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://*.google.com; connect-src 'self' https:; media-src 'self' https:; child-src https://www.youtube.com https://www.youtube-nocookie.com blob:"
   }
 }
