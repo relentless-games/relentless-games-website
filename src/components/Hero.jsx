@@ -33,9 +33,16 @@ export default function Hero() {
       </div>
 
       <div className="hero__content container">
-        <h1 ref={titleRef} className="hero__title">
-          Sprinkles
-        </h1>
+        <div ref={titleRef} className="hero__title-row">
+          <h1 className="hero__title">
+            Sprinkles
+          </h1>
+          <img
+            src="/images/relentless-games-logo.png"
+            alt="Relentless Games logo"
+            className="hero__logo"
+          />
+        </div>
         <p ref={subtitleRef} className="hero__subtitle">
           Coming soon to Meta Quest
         </p>
