@@ -1,0 +1,57 @@
+.privacy {
+  min-height: 100vh;
+  background: var(--navy);
+  padding: 6rem 0 4rem;
+}
+
+.privacy .container {
+  max-width: 800px;
+}
+
+.privacy__back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: var(--cyan);
+  transition: color 0.3s ease;
+}
+
+.privacy__back:hover {
+  color: var(--white);
+}
+
+.privacy h1 {
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--cyan), var(--pink-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.privacy__updated {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+.privacy h2 {
+  font-size: 1.3rem;
+  margin: 2rem 0 0.75rem;
+  color: var(--cyan);
+}
+
+.privacy p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.privacy a {
+  color: var(--pink-light);
+  text-decoration: underline;
+}
+
+.privacy a:hover {
+  color: var(--white);
+}

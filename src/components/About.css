@@ -1,0 +1,66 @@
+.about {
+  background: var(--navy);
+  padding: 6rem 0 8rem;
+}
+
+.about__heading {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.25rem;
+  background: linear-gradient(90deg, var(--cyan), var(--pink-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about__intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.about__card {
+  background: linear-gradient(
+    135deg,
+    rgba(125, 240, 237, 0.08),
+    rgba(229, 42, 110, 0.08)
+  );
+  border: 1px solid rgba(125, 240, 237, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about__card:hover {
+  transform: translateY(-8px);
+  border-color: var(--cyan);
+}
+
+.about__icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about__card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--cyan);
+}
+
+.about__card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
