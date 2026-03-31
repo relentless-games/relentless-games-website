@@ -1,56 +1,59 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Privacy.css';
 
 export default function Privacy() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="privacy">
       <div className="container">
         <Link to="/" className="privacy__back">&larr; Back to Home</Link>
 
-        <h1>Privacy Policy &amp; Terms of Service</h1>
-        <p className="privacy__updated">Last updated: March 31, 2026</p>
+        <h1>Privacy Policy for Relentless Games</h1>
+        <p className="privacy__updated">Last updated: January 2025</p>
 
         <h2>1. Introduction</h2>
         <p>
-          Welcome to the Relentless Games website. This Privacy Policy explains how we collect, 
-          use, and protect your personal information when you visit our website or interact with our services.
+          Welcome to Relentless Games. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.
         </p>
 
-        <h2>2. Information We Collect</h2>
+        <h2>2. Data We Collect</h2>
         <p>
-          We may collect information you provide directly, such as your name and email address 
-          when you contact us. We also automatically collect certain technical data including 
-          browser type, IP address, and pages visited.
+          We do not collect any personal data from our visitors. When you visit our website, you can browse without having to provide any personal information.
         </p>
 
-        <h2>3. How We Use Your Information</h2>
+        <h2>3. Use of Cookies and Tracking</h2>
         <p>
-          We use collected information to operate and improve our website, communicate with you, 
-          and ensure the security of our services.
+          Our website does not use cookies or any form of tracking technologies that collect personal information about visitors.
         </p>
 
-        <h2>4. Third-Party Services</h2>
+        <h2>4. Third-Party Links</h2>
         <p>
-          Our website may contain embedded content (e.g., YouTube videos) that is served by 
-          third parties. These services may collect data about you according to their own privacy policies.
+          Our website may include links to third-party websites, plug-ins, and applications. Clicking on those links may allow third parties to collect or share data about you. We do not control these third-party websites and are not responsible for their privacy statements.
         </p>
 
         <h2>5. Data Security</h2>
         <p>
-          We take reasonable measures to protect your information. However, no method of 
-          transmission over the internet is 100% secure.
+          We have put in place suitable security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way, altered, or disclosed. However, as we do not collect personal data, the risk to your personal data is minimal.
         </p>
 
-        <h2>6. Contact Us</h2>
+        <h2>6. Your Legal Rights</h2>
         <p>
-          If you have questions about this policy, please contact us at{' '}
-          <a href="mailto:g@relentless.games">g@relentless.games</a>.
+          Under certain circumstances, you have rights under data protection laws in relation to your personal data, such as the right to request access, correction, erasure, or transfer of your personal data. Since we do not collect any personal data, these rights may not be applicable.
         </p>
 
-        <h2>7. Terms of Service</h2>
+        <h2>7. Changes to This Policy</h2>
         <p>
-          By using this website, you agree to these terms. We reserve the right to update 
-          these terms at any time. Continued use of the site constitutes acceptance of any changes.
+          We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.
+        </p>
+
+        <h2>8. Contact Us</h2>
+        <p>
+          If you have any questions about this privacy policy, please contact us at{' '}
+          <a href="mailto:hello@relentless.games">hello@relentless.games</a>.
         </p>
       </div>
     </div>
