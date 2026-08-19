@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import './Hero.css';
 
-const YOUTUBE_VIDEO_ID = '1_ImOyM18AA';
+const YOUTUBE_VIDEO_ID = 'vaABGzI2Cto';
 
 export default function Hero() {
   const [isPlayerLoaded, setIsPlayerLoaded] = useState(false);
